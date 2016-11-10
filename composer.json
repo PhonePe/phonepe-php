@@ -1,0 +1,24 @@
+{
+    "name": "phonepe/php-merchant-client",
+    "description": "https://github.com/PhonePe/phonepe-merchant-client-php.git",
+    "keywords": [
+        "PhonePe",
+        "api",
+        "php",
+        "client"
+    ],
+    "support": {
+        "email": "support@phonpe.com",
+        "source": "https://github.com/Phonepe/phonepe-php-client"
+    },
+    "homepage": "https://developer.phonepe.com",
+    "require": {
+        "mindplay/annotations": "^1.3",
+        "phpunit/phpunit": "5.5.*"
+    },
+    "autoload": {
+        "classmap" : [
+            "./"
+        ]
+    }
+}
