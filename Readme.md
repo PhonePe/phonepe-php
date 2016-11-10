@@ -1,4 +1,4 @@
-## PhonePe Client Php
+## PhonePe Merchant Client Php
 
 This is a Php client for merchant integration. A minimum of PHP 5.3 is required for using this client. For references on all the API's visit:
  
