@@ -1,6 +1,6 @@
 {
     "name": "phonepe/php-merchant-client",
-    "description": "https://github.com/PhonePe/phonepe-merchant-client-php.git",
+    "description": "PhonePe Merchant Client Php",
     "keywords": [
         "PhonePe",
         "api",
@@ -9,7 +9,7 @@
     ],
     "support": {
         "email": "support@phonpe.com",
-        "source": "https://github.com/Phonepe/phonepe-php-client"
+        "source": "https://github.com/PhonePe/phonepe-merchant-client-php.git"
     },
     "homepage": "https://developer.phonepe.com",
     "require": {
