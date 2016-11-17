@@ -50,46 +50,91 @@ class PhonePeClientImpl implements PhonePeClient
     function __construct()
     {
         $this->phonePeClientConfig = new PhonePeClientConfig();
-        $this->phonePeClientConfig->mercuryBaseUrl = 'https://mercury-uat.phonepe.com';
-}
+    }
+    public static function testConstruct($hostname) {
+        $instance = new self();
+        $instance->phonePeClientConfig = new PhonePeClientConfig();
+        $instance->phonePeClientConfig->mercuryBaseUrl = $hostname;
+        return $instance;
+    }
 
+    /**
+     * @param RegularCreditRequest $creditRequest
+     * @return Models\RegularCreditResponse
+     */
     function regularCredit(RegularCreditRequest $creditRequest) {
         return RegularCreditExec::regularCredit($creditRequest, $this->phonePeClientConfig);
     }
 
+    /**
+     * @param InstantCreditRequest $creditRequest
+     * @return Models\InstantCreditResponse
+     */
     function instantCredit(InstantCreditRequest $creditRequest) {
         return InstantCreditExec::instantCredit($creditRequest, $this->phonePeClientConfig);
     }
 
+    /**
+     * @param DeferredCreditRequest $creditRequest
+     * @return Models\DeferredCreditResponse
+     */
     function deferredCredit(DeferredCreditRequest $creditRequest)
     {
         return DeferredCreditExec::deferredCredit($creditRequest, $this->phonePeClientConfig);
     }
 
+    /**
+     * @param FulfillCreditRequest $fulfillRequest
+     * @return Models\FulfillCreditResponse
+     */
     function fulfillCredit(FulfillCreditRequest $fulfillRequest) {
         return FulfillCreditExec::fulfillCredit($fulfillRequest, $this->phonePeClientConfig);
     }
 
+    /**
+     * @param BackToSourceCreditRequest $creditRequest
+     * @return Models\BackToSourceCreditResponse
+     */
     function backToSourceCredit(BackToSourceCreditRequest $creditRequest) {
         return BackToSourceExec::backToSource($creditRequest, $this->phonePeClientConfig);
     }
 
+    /**
+     * @param RegularDebitRequest $debitRequest
+     * @return Models\RegularDebitResponse
+     */
     function regularDebit(RegularDebitRequest $debitRequest) {
         return RegularDebitExec::regularDebit($debitRequest, $this->phonePeClientConfig);
     }
 
+    /**
+     * @param InstantDebitRequest $debitRequest
+     * @return Models\InstantDebitResponse
+     */
     function instantDebit(InstantDebitRequest $debitRequest) {
         return InstantDebitExec::instantDebit($debitRequest, $this->phonePeClientConfig);
     }
 
+    /**
+     * @param TransactionStatusRequest $statusRequest
+     * @return Models\TransactionStatusResponse
+     */
     function transactionStatus(TransactionStatusRequest $statusRequest) {
         return TransactionStatusExec::transactionStatus($statusRequest, $this->phonePeClientConfig);
     }
 
+    /**
+     * @param DebitSuggestRequest $debitSuggestRequest
+     * @return Models\DebitSuggestResponse
+     */
     function debitSuggest(DebitSuggestRequest $debitSuggestRequest) {
         return DebitSuggestExec::debitSuggest($debitSuggestRequest, $this->phonePeClientConfig);
     }
 
+    /**
+     * @param CreditSuggestRequest $creditSuggestRequest
+     * @return Models\CreditSuggestResponse
+     */
     function creditSuggest(CreditSuggestRequest $creditSuggestRequest) {
         return CreditSuggestExec::creditSuggest($creditSuggestRequest, $this->phonePeClientConfig);
     }

@@ -39,7 +39,7 @@ class RegularDebitExec
      */
     static function regularDebit(RegularDebitRequest $request, PhonePeClientConfig $phonePeClientConfig)
     {
-        $url = $phonePeClientConfig->mercuryBaseUrl . '/v1/credit/';
+        $url = $phonePeClientConfig->mercuryBaseUrl . '/v1/debit/';
         $args = array($request->merchantId, $request->transactionId, $request->amount, $request->header->salt->key, $request->header->salt->index);
         $headers = 'Content-type:application/json ' . 'X-VERIFY:' . ChecksumGenerator::checkSumGenerate($args) . 'X-CALLBACK-URL:' . $request->header->callBackUri;
         $responseArray = RequestGenerator::postRequest($url, $request, $headers);

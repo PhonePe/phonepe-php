@@ -13,5 +13,5 @@ class PhonePeClientConfig
     /**
      * @var string
      */
-    public $mercuryBaseUrl;
+    public $mercuryBaseUrl = 'https://mercury-uat.phonepe.com';
 }
