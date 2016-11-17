@@ -59,6 +59,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc UI flow for crediting amount to Customer
      * @param RegularCreditRequest $creditRequest
      * @return Models\RegularCreditResponse
      */
@@ -67,6 +68,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc Direct API to credit amount to customer
      * @param InstantCreditRequest $creditRequest
      * @return Models\InstantCreditResponse
      */
@@ -75,6 +77,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc UI based workflow to allow for Login/Registration to initiate a deferred credit request
      * @param DeferredCreditRequest $creditRequest
      * @return Models\DeferredCreditResponse
      */
@@ -84,6 +87,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc API based flow to fulfill the deferred request
      * @param FulfillCreditRequest $fulfillRequest
      * @return Models\FulfillCreditResponse
      */
@@ -92,6 +96,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc API flow to reverse a previous transaction
      * @param BackToSourceCreditRequest $creditRequest
      * @return Models\BackToSourceCreditResponse
      */
@@ -100,6 +105,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc  Regular debit is a UI based workflow to allow for Login/Registration to accept payments
      * @param RegularDebitRequest $debitRequest
      * @return Models\RegularDebitResponse
      */
@@ -108,6 +114,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc This is an API only workflow that instantly debits a PhonePe users wallet account
      * @param InstantDebitRequest $debitRequest
      * @return Models\InstantDebitResponse
      */
@@ -116,6 +123,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc This API is used to check the status of the transaction
      * @param TransactionStatusRequest $statusRequest
      * @return Models\TransactionStatusResponse
      */
@@ -124,6 +132,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc Used in a debit scenario to check the instruments available for payment, along with usable balance in the wallet
      * @param DebitSuggestRequest $debitSuggestRequest
      * @return Models\DebitSuggestResponse
      */
@@ -132,6 +141,7 @@ class PhonePeClientImpl implements PhonePeClient
     }
 
     /**
+     * @desc Used in a credit scenario to check the maximum balance that can be received in the wallet
      * @param CreditSuggestRequest $creditSuggestRequest
      * @return Models\CreditSuggestResponse
      */
