@@ -8,9 +8,19 @@
 
 namespace PhonePe\Utils;
 
-
+/**
+ * Class RequestGenerator
+ * @package PhonePe\Utils
+ */
 class RequestGenerator
 {
+    /**
+     * @desc Helper function to send a post request
+     * @param $url
+     * @param $body
+     * @param $headers
+     * @return array
+     */
     static function postRequest($url, $body, $headers) {
         // Creating Array of headers
         $headers = explode(" ", $headers);
@@ -27,6 +37,12 @@ class RequestGenerator
         return array($response, $responseHeaders);
     }
 
+    /**
+     * @desc Helper function to send a get request
+     * @param $url
+     * @param $headers
+     * @return mixed
+     */
     static function getRequest($url, $headers) {
         // Creating Array of headers
         $headers = explode(" ", $headers);
