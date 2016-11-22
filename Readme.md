@@ -60,6 +60,6 @@ the salt index
     
     require('vendor/autoload.php')
     
-    $args = array($merchantId, $transactionId, $amount, $saltKey, $saltIndex
+    $args = array($merchantId, $transactionId, $amount, $saltKey, $saltIndex)
     $result = ChecksumGenerator::checkSumGenerate($args);
 ```
