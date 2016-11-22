@@ -11,6 +11,7 @@ namespace PhonePe\Configuration;
 class PhonePeClientConfig
 {
     /**
+     * @desc The url 
      * @var string
      */
     public $mercuryBaseUrl = 'https://mercury-uat.phonepe.com';
