@@ -9,13 +9,13 @@
     ],
     "support": {
         "email": "support@phonpe.com",
-        "source": "https://github.com/PhonePe/phonepe-merchant-client-php.git"
+        "source": "https://github.com/PhonePe/phonepe-php.git"
     },
     "homepage": "https://developer.phonepe.com",
     "require": {
         "mindplay/annotations": "^1.3",
         "phpunit/phpunit": "5.5.*",
-        "internations/http-mock": "^0.8.1"
+        "internations/http-mock": "^0.8.1",
     },
     "autoload": {
         "classmap" : [

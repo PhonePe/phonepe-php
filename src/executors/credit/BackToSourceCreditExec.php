@@ -16,7 +16,7 @@ use PhonePe\Models\BackToSourceCreditResponse;
 use PhonePe\Utils\ChecksumGenerator;
 use PhonePe\Utils\RequestGenerator;
 
-class BackToSourceExec
+class BackToSourceCreditExec
 {
     /**
      * @param BackToSourceCreditRequest $request
