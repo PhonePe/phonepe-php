@@ -9,7 +9,7 @@
     ],
     "support": {
         "email": "support@phonpe.com",
-        "source": "https://github.com/PhonePe/phonepe-merchant-client-php.git"
+        "source": "https://github.com/PhonePe/phonepe-php.git"
     },
     "homepage": "https://developer.phonepe.com",
     "require": {
